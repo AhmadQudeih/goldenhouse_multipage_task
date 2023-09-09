@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goldenhouse_multipage_task/firstPage.dart';
+import 'package:goldenhouse_multipage_task/second.dart';
 
 void main() {
   runApp(const MyApp());

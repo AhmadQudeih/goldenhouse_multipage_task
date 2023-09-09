@@ -10,7 +10,7 @@ class First extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xffffc806),
+        backgroundColor: Color(0xffFFC806),
         elevation: 0,
         shape: OutlineInputBorder(
           borderRadius: BorderRadius.only(
@@ -18,9 +18,19 @@ class First extends StatelessWidget {
               bottomLeft: Radius.circular(10)),
           borderSide: BorderSide.none,
         ),
-        leading: Row(
-          children: [Text('data'), Icon(Icons.arrow_back)],
-        ),
+        actions: [
+          Row(
+            children: [
+              Container(margin: EdgeInsets.only(right: 5), child: Text('رجوع')),
+              Container(
+                  margin: EdgeInsets.only(right: 16),
+                  child: Icon(
+                    Icons.arrow_forward_ios,
+                    size: 15,
+                  )),
+            ],
+          )
+        ],
       ),
       body: Directionality(
         textDirection: TextDirection.rtl,
