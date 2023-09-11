@@ -58,8 +58,8 @@ class Second extends StatelessWidget {
                                         // color: Colors.green,
                                         borderRadius: BorderRadius.circular(8)),
                                     child: Image.asset(
-                                      'images/ff.png',
-                                      fit: BoxFit.cover,
+                                      'assets/images/Ellipse 10.png',
+                                      fit: BoxFit.fill,
                                       height: 72,
                                       width: 72,
                                     ),
