@@ -39,7 +39,7 @@ class Second extends StatelessWidget {
               ListView(
                 children: [
                   SizedBox(
-                    height: 500,
+                    height: 650,
                     child: ListView.builder(
                         shrinkWrap: true,
                         // physics: NeverScrollableScrollPhysics(),
