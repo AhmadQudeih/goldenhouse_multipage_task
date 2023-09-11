@@ -46,7 +46,7 @@ class First extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                     border: InputBorder.none,
-                    hintText: 'نتيجة البحث عن وجبلات سريعة',
+                    hintText: '       نتيجة البحث عن وجبلات سريعة',
                     hintStyle: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.bold,
@@ -87,9 +87,11 @@ class First extends StatelessWidget {
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                          spreadRadius: 5,
-                          blurRadius: 5,
-                          color: Color.fromARGB(255, 193, 192, 192))
+                        color: Colors.grey,
+                        offset: Offset(0, 2),
+                        blurRadius: 5,
+                        spreadRadius: 0,
+                      ),
                     ],
                     borderRadius: BorderRadius.circular(8),
                   ),

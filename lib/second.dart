@@ -155,6 +155,7 @@ class Second extends StatelessWidget {
                 );
               },
             ),
+            Divider(endIndent: 20, indent: 20),
             Container(
               margin: EdgeInsets.only(top: 280, right: 318),
               child: Text(
