@@ -33,175 +33,217 @@ class Second extends StatelessWidget {
         ],
       ),
       body: Directionality(
-        textDirection: TextDirection.rtl,
-        child: Column(
-          children: [
-            SizedBox(height: 18),
-            ListView.separated(
-              itemCount: 3,
-              physics: NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemBuilder: (context, index) {
-                return Container(
-                  child: ListTile(
-                    leading: SizedBox(
-                      height: 72,
-                      width: 72,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Image.asset(
-                          'assets/images/Rectangle 26.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                    title: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+          textDirection: TextDirection.rtl,
+          child: Stack(
+            children: [
+              ListView(
+                children: [
+                  SizedBox(
+                    height: 500,
+                    child: ListView.builder(
+                        shrinkWrap: true,
+                        // physics: NeverScrollableScrollPhysics(),
+                        itemCount: 20,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 17),
+                            child: SizedBox(
+                              height: 100,
+                              child: Row(
+                                children: [
+                                  Container(
+                                    height: double.infinity,
+                                    decoration: BoxDecoration(
+                                        // color: Colors.green,
+                                        borderRadius: BorderRadius.circular(8)),
+                                    child: Image.asset(
+                                      'images/ff.png',
+                                      fit: BoxFit.cover,
+                                      height: 72,
+                                      width: 72,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.only(right: 7, top: 3),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'وجبة فتة شاورما تكفي 3 أفراد',
+                                          style: TextStyle(
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Row(
+                                          // mainAxisAlignment: MainAxisAlignment.start
+                                          children: [
+                                            Icon(
+                                              Icons.location_on_outlined,
+                                              size: 15,
+                                            ),
+                                            SizedBox(
+                                              width: 2,
+                                            ),
+                                            Text(
+                                              'شاورما الريم',
+                                              style: TextStyle(fontSize: 10),
+                                            )
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Row(
+                                          children: [
+                                            Icon(
+                                              Icons.star,
+                                              size: 15,
+                                              color: Colors.yellow,
+                                            ),
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                            Text(
+                                              '5.0',
+                                              style: TextStyle(fontSize: 9),
+                                            ),
+                                            SizedBox(
+                                              width: 12,
+                                            ),
+                                            Icon(
+                                              Icons.access_time_filled,
+                                              size: 15,
+                                            ),
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                            Text(
+                                              'يصلك خلال 30 دقيقة',
+                                              style: TextStyle(fontSize: 9),
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        height: 60,
+                                        width: 60,
+                                        decoration: BoxDecoration(
+                                            color: Color(0xffFFC806),
+                                            borderRadius:
+                                                BorderRadius.circular(5)),
+                                        child: Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 5),
+                                          child: Column(
+                                            children: [
+                                              Text(
+                                                '140',
+                                                style: TextStyle(
+                                                    fontSize: 23,
+                                                    color: Colors.white,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                              //SizedBox(height: 2,),
+                                              Text(
+                                                'ليرة',
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    color: Colors.white,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 8,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.delete,
+                                            size: 15,
+                                            color: Color(0xffC0C0C0),
+                                          ),
+                                          SizedBox(
+                                            width: 2,
+                                          ),
+                                          Text(
+                                            'حذف الطلب',
+                                            style: TextStyle(
+                                              fontSize: 9,
+                                              color: Color(0xffC0C0C0),
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        }),
+                  ),
+                ],
+              ),
+              Positioned(
+                bottom: 10,
+                right: 3,
+                left: 3,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Column(
                       children: [
                         Text(
-                          'مشويات البخاري',
+                          'الإجمالي',
                           style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
+                              fontSize: 14, fontWeight: FontWeight.bold),
                         ),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.location_on,
-                              size: 10,
-                            ),
-                            Text(
-                              'البخاري',
-                              style: TextStyle(
-                                  fontSize: 10, fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
+                        Text(
+                          '213.00 ليرة',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 12),
+                        )
                       ],
                     ),
-                    subtitle: Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(right: 10),
-                          child: Row(
-                            children: [
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                              ),
-                              Text(
-                                '5.0',
-                                style: TextStyle(fontSize: 10),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(right: 10),
-                          child: Row(
-                            children: [
-                              Icon(
-                                Icons.schedule,
-                                size: 14,
-                              ),
-                              Text(
-                                '30-25 دقيقة',
-                                style: TextStyle(fontSize: 10),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    trailing: Container(
-                      width: 54.03,
-                      height: 46.10,
-                      decoration: ShapeDecoration(
-                        color: Color(0xFFFFC806),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(4)),
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        'تأكيد الطلب',
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                       ),
-                      child: SizedBox(
-                        width: 35.82,
-                        child: Column(
-                          children: [
-                            Text(
-                              '140',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 23,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            Text(
-                              'ليرة',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 10,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xffFFC806),
+                          minimumSize: Size(double.infinity, 50),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          )),
                     ),
-                  ),
-                );
-              },
-              separatorBuilder: (context, index) {
-                return SizedBox(
-                  height: 20,
-                );
-              },
-            ),
-            Divider(endIndent: 20, indent: 20),
-            Container(
-              margin: EdgeInsets.only(top: 280, right: 318),
-              child: Text(
-                'الإجمالي',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700,
+                  ],
                 ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(right: 320),
-              child: Text(
-                '213.00 ليرة',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-            Spacer(),
-            Container(
-              margin: EdgeInsets.only(bottom: 100, left: 16, right: 16),
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text(
-                  'تأكيد الطلب',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                      Color(0xffFFC806),
-                    ),
-                    elevation: MaterialStateProperty.all(0),
-                    minimumSize:
-                        MaterialStateProperty.all(Size(double.infinity, 50))),
-              ),
-            )
-          ],
-        ),
-      ),
+              )
+            ],
+          )),
     );
   }
 }
