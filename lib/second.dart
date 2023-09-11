@@ -45,7 +45,7 @@ class Second extends StatelessWidget {
                 return Container(
                   child: ListTile(
                     leading: SizedBox(
-                      height: 100,
+                      height: 72,
                       width: 72,
                       child: Container(
                         decoration: BoxDecoration(
