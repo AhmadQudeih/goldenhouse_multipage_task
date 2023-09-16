@@ -43,7 +43,7 @@ class _SecondState extends State<Second> {
         imagesUrl:
             'https://th.bing.com/th/id/R.f6246bc2420cc96c5d2c472c55299afa?rik=ihGFMxpLgDWzbw&pid=ImgRaw&r=0',
         title: 'شاورما',
-        location: 'سنtyurkyjrhgابل',
+        location: 'سنtyurkyjrhgبل',
         price: 50,
         rate: 7,
         delivaryTime: 32),
