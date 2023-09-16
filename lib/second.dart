@@ -2,10 +2,53 @@
 
 import 'package:flutter/material.dart';
 import 'package:goldenhouse_multipage_task/firstPage.dart';
+import 'package:goldenhouse_multipage_task/model/foodList.dart';
+import 'package:goldenhouse_multipage_task/model/foodList.dart';
 
-class Second extends StatelessWidget {
+import 'model/foodList.dart';
+
+class Second extends StatefulWidget {
   const Second({super.key});
 
+  @override
+  State<Second> createState() => _SecondState();
+}
+
+class _SecondState extends State<Second> {
+  List<FoodList> foodList = [
+    FoodList(
+        imagesUrl:
+            'https://th.bing.com/th/id/R.f6246bc2420cc96c5d2c472c55299afa?rik=ihGFMxpLgDWzbw&pid=ImgRaw&r=0',
+        title: 'شاورما',
+        location: 'سنابل',
+        price: 231,
+        rate: 5,
+        delivaryTime: 32),
+    FoodList(
+        imagesUrl:
+            'https://th.bing.com/th/id/R.f6246bc2420cc96c5d2c472c55299afa?rik=ihGFMxpLgDWzbw&pid=ImgRaw&r=0',
+        title: 'شاورما',
+        location: 'asgf',
+        price: 763,
+        rate: 2,
+        delivaryTime: 32),
+    FoodList(
+        imagesUrl:
+            'https://th.bing.com/th/id/R.f6246bc2420cc96c5d2c472c55299afa?rik=ihGFMxpLgDWzbw&pid=ImgRaw&r=0',
+        title: 'شاورما',
+        location: 'sdhfgerwdhg',
+        price: 56,
+        rate: 4,
+        delivaryTime: 32),
+    FoodList(
+        imagesUrl:
+            'https://th.bing.com/th/id/R.f6246bc2420cc96c5d2c472c55299afa?rik=ihGFMxpLgDWzbw&pid=ImgRaw&r=0',
+        title: 'شاورما',
+        location: 'سنtyurkyjrhgابل',
+        price: 50,
+        rate: 7,
+        delivaryTime: 32),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,8 +86,7 @@ class Second extends StatelessWidget {
                   height: 650,
                   child: ListView.builder(
                       shrinkWrap: true,
-                      // physics: NeverScrollableScrollPhysics(),
-                      itemCount: 20,
+                      itemCount: 4,
                       itemBuilder: (context, index) {
                         return Padding(
                           padding: const EdgeInsets.symmetric(
@@ -59,7 +101,7 @@ class Second extends StatelessWidget {
                                       // color: Colors.green,
                                       borderRadius: BorderRadius.circular(8)),
                                   child: Image.asset(
-                                    'assets/images/Ellipse 10.png',
+                                    'assets/images/Rectangle 17.png',
                                     fit: BoxFit.fill,
                                     height: 72,
                                     width: 72,
@@ -73,7 +115,7 @@ class Second extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'وجبة فتة شاورما تكفي 3 أفراد',
+                                        foodList[index].title,
                                         style: TextStyle(
                                             fontSize: 15,
                                             fontWeight: FontWeight.bold),
@@ -92,7 +134,7 @@ class Second extends StatelessWidget {
                                             width: 2,
                                           ),
                                           Text(
-                                            'شاورما الريم',
+                                            foodList[index].location,
                                             style: TextStyle(fontSize: 10),
                                           )
                                         ],
@@ -111,7 +153,7 @@ class Second extends StatelessWidget {
                                             width: 4,
                                           ),
                                           Text(
-                                            '5.0',
+                                            foodList[index].rate.toString(),
                                             style: TextStyle(fontSize: 9),
                                           ),
                                           SizedBox(
@@ -125,7 +167,7 @@ class Second extends StatelessWidget {
                                             width: 4,
                                           ),
                                           Text(
-                                            'يصلك خلال 30 دقيقة',
+                                            'يصلك خلال ${foodList[index].delivaryTime} دقيقة',
                                             style: TextStyle(fontSize: 9),
                                           ),
                                         ],
