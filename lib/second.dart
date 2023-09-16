@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:goldenhouse_multipage_task/firstPage.dart';
 import 'package:goldenhouse_multipage_task/model/foodList.dart';
 import 'package:goldenhouse_multipage_task/model/foodList.dart';
-
 import 'model/foodList.dart';
 
 class Second extends StatefulWidget {
