@@ -14,32 +14,24 @@ class Second extends StatefulWidget {
 class _SecondState extends State<Second> {
   List<FoodList> foodList = [
     FoodList(
-        imagesUrl:
-            'https://th.bing.com/th/id/R.f6246bc2420cc96c5d2c472c55299afa?rik=ihGFMxpLgDWzbw&pid=ImgRaw&r=0',
         title: 'شاورما',
         location: 'سنابل',
         price: 231,
         rate: 5,
         delivaryTime: 32),
     FoodList(
-        imagesUrl:
-            'https://th.bing.com/th/id/R.f6246bc2420cc96c5d2c472c55299afa?rik=ihGFMxpLgDWzbw&pid=ImgRaw&r=0',
         title: 'شاورما',
         location: 'asgf',
         price: 763,
         rate: 2,
         delivaryTime: 32),
     FoodList(
-        imagesUrl:
-            'https://th.bing.com/th/id/R.f6246bc2420cc96c5d2c472c55299afa?rik=ihGFMxpLgDWzbw&pid=ImgRaw&r=0',
         title: 'شاورما',
         location: 'sdhfgerwdhg',
         price: 56,
         rate: 4,
         delivaryTime: 32),
     FoodList(
-        imagesUrl:
-            'https://th.bing.com/th/id/R.f6246bc2420cc96c5d2c472c55299afa?rik=ihGFMxpLgDWzbw&pid=ImgRaw&r=0',
         title: 'شاورما',
         location: 'سنtyurkyjrhgبل',
         price: 50,

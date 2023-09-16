@@ -1,5 +1,4 @@
 class FoodList {
-  String imagesUrl = '';
   String title = '';
   String location = '';
   double price = 0;
@@ -7,8 +6,7 @@ class FoodList {
   double delivaryTime = 0;
 
   FoodList(
-      {required this.imagesUrl,
-      required this.title,
+      {required this.title,
       required this.location,
       required this.price,
       required this.rate,
